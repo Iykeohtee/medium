@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+
+body{
+  overflow-x: hidden;
+}
+.contain{
+  position: relative;
+  display: flex;
+}
+.left_contain{
+  position: relative;
+  flex: 3;   
+}
+.left_contain::after{
+  content: '';
+  width: 1px;
+  height: 100vh;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.left_contain div{
+  padding: 20px 30px;
+}
+.right_contain{
+  flex: 1;
+}

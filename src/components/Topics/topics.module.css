@@ -1,0 +1,19 @@
+.contain{
+    display: grid;
+    grid-template-columns: repeat(10, 15%);
+    gap: 30px;
+    position: sticky;
+    top: 2px;   
+    overflow-x: scroll;
+    width: 100%;
+    -ms-overflow-style: none;  /* IE and Edge */
+   scrollbar-width: none; /* Firefox */
+}
+.contain::-webkit-scrollbar {
+    display: none;
+}
+.contain h1{
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer; 
+}
