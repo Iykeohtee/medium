@@ -1,10 +1,18 @@
+'use client'  
+
 import Logo from "../helpers/Logo";
 import { CiSearch } from "react-icons/ci";
 import { FaRegPenToSquare } from "react-icons/fa6";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import styles from "./navbar.module.css";
+import { getPost } from "@/utils/fetchData";
 
 const Navbar = () => {
+ 
+    const handleSearch = () => {
+      getPost('house')
+    }
+
     return (
         <div className={`${styles.contain}`}>   
 
@@ -22,7 +30,9 @@ const Navbar = () => {
 
              <div className="flex items-center gap-2"> 
                 <FaRegPenToSquare className="w-6 h-6"/>
-                <p className="text-base capitalize font-[100]">write</p>
+                <p className="text-base capitalize font-[100]"
+                 onClick={handleSearch}    
+                >write</p>
              </div>
 
              <IoIosNotificationsOutline className="h-6 w-6"/>    

@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar/Navbar"
 import Topics from "@/components/Topics/Topics"
+import { getPost } from "@/utils/fetchData"
 
 export default function Home() {
 
